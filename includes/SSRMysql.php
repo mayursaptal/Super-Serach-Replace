@@ -3,9 +3,9 @@ if (!defined('ABSPATH')) {
     die('DEAD END');
 }
 /**
- * Super Serach Replace
+ * Super Search Replace
  *
- * @package           SuperSerachReplace
+ * @package           SuperSearchReplace
  * @author            Mayur Saptal
  * @copyright         2020 Mayur Saptal
  * @license           GPL-2.0-or-later

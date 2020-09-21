@@ -3,9 +3,9 @@ if (!defined('ABSPATH')) {
     die('DEAD END');
 }
 /**
- * Super Serach Replace
+ * Super Search Replace
  *
- * @package           SuperSerachReplace
+ * @package           SuperSearchReplace
  * @author            Mayur Saptal
  * @copyright         2020 Mayur Saptal
  * @license           GPL-2.0-or-later
@@ -15,9 +15,9 @@ if (!defined('ABSPATH')) {
 
 require_once  __DIR__ . DIRECTORY_SEPARATOR . 'SSRMysql.php';
 
-if (!class_exists('SuperSerachReplace')) {
+if (!class_exists('SuperSearchReplace')) {
 
-    class SuperSerachReplace
+    class SuperSearchReplace
     {
 
         public $search_for;
@@ -46,7 +46,7 @@ if (!class_exists('SuperSerachReplace')) {
 
         public function setLogPath($upload_dir)
         {
-            $this->log_dir_path = $upload_dir . DIRECTORY_SEPARATOR . 'SuperSerachReplace';
+            $this->log_dir_path = $upload_dir . DIRECTORY_SEPARATOR . 'SuperSearchReplace';
             // $this->log_file = date('Y-m-d--H-i-s') . '-' . $this->randomString(12) . '.txt';
             $this->log_file_path = $this->log_dir_path . DIRECTORY_SEPARATOR . $this->log_file;
             $dir_exists = $this->makeDirs($this->log_dir_path);
@@ -94,7 +94,7 @@ if (!class_exists('SuperSerachReplace')) {
 
         public function getLogEnd($upload_dir, $lines = 2)
         {
-            $this->log_dir_path = $upload_dir . DIRECTORY_SEPARATOR . 'SuperSerachReplace';
+            $this->log_dir_path = $upload_dir . DIRECTORY_SEPARATOR . 'SuperSearchReplace';
             $this->log_file_path = $this->log_dir_path . DIRECTORY_SEPARATOR . $this->log_file;
             return join(PHP_EOL, array_slice(explode("\n", file_get_contents($this->log_file_path)), -$lines));
         }
@@ -122,9 +122,9 @@ if (!class_exists('SuperSerachReplace')) {
 
         public function updateMysqlTabels()
         {
-            $this->setLog('Updating  table  search  ' . $this->search_for . ' replace with ' . $this->replace_with);
+            $this->setLog('Updating  table  Search ' . $this->search_for . ' replace with ' . $this->replace_with);
             $tables_with_columns = $this->getMysqlTablesCloumns();
-            $search =  $this->search_for;
+            $Search =  $this->search_for;
             $replace =  $this->replace_with;
             foreach ($tables_with_columns  as $tables_with_column) {
                 $table = $tables_with_column['TABLE_NAME'];
@@ -138,7 +138,7 @@ if (!class_exists('SuperSerachReplace')) {
 
         public  function updateFiles()
         {
-            $this->setLog('Updating file search  ' . $this->search_for . ' replace with ' . $this->replace_with);
+            $this->setLog('Updating file Search ' . $this->search_for . ' replace with ' . $this->replace_with);
             $files = $this->getDirContents(ABSPATH, $this->file_filter);
             $this->setExcludeFiles(array(
                 $this->log_file_path

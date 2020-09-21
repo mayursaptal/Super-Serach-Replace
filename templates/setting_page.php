@@ -1,11 +1,11 @@
-<h1>Super Search Replace</h1>
+<h1>Super SearchReplace</h1>
 
 <div style="max-width: 800px;margin:0 auto;">
     <div style="width: 100%;height:250px;padding:10px; color:#fff;background:#000;overflow-y: scroll;" id="ssr_container" class="ssr_container">
         <h2 style="font-size: 40px;  color: #fff !important;">Welcome!</h2>
         <p style="font-size: 16px;" class="ssr_status">
             This is an ultimate plugin which replaces Text from the complete WordPress installation which includes database as well as from file types PHP, CSS, JS, Text.
-            <br> Before starting please verify the Search and Replace text, Once started it can't be stopped until complete.
+            <br> Before starting please verify the Searchand Replace text, Once started it can't be stopped until complete.
             <br>#~ start
         </p>
     </div>
